@@ -17,7 +17,7 @@ after_success:
   # login to docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # take images and push them to docker HUB
-  - docker push hefayed/multi-client
-  - docker push hefayed/multi-nginx
-  - docker push hefayed/multi-server
-  - docker push hefayed/multi-worker
+  - docker push multi-docker:hefayed/multi-client
+  - docker push multi-docker:hefayed/multi-nginx
+  - docker push multi-docker:hefayed/multi-server
+  - docker push multi-docker:hefayed/multi-worker
